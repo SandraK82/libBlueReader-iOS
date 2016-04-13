@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'libBlueReader_Example', :exclusive => true do
+  pod 'libBlueReader', :path => '../'
+end
+
+target 'libBlueReader_Tests', :exclusive => true do
+  pod 'libBlueReader', :path => '../'
+
+  
+end
