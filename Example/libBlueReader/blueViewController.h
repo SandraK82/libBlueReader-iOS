@@ -7,7 +7,9 @@
 //
 
 @import UIKit;
+#import <libBlueReader/blueReader.h>
 
-@interface blueViewController : UIViewController
+@interface blueViewController : UIViewController<BlueReaderDelegate>
+
 
 @end

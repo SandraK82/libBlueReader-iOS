@@ -8,23 +8,17 @@
 
 Pod::Spec.new do |s|
   s.name             = "libBlueReader"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of libBlueReader."
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
+  s.version          = "0.0.1"
+  s.summary          = "libBlueReader is the companion library to the open-source blueReader Hardware"
   s.description      = <<-DESC
+The blueReader NFC-BLE-Adapter is a ready to buy or diy Hardware for reading and writing nfc-tags via a bluetooth enabled Device. This library implements the interfaces for iOS to find a blueReader Bluetooth device, configure the device, and read/ write Tags
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/libBlueReader"
+  s.homepage         = "https://github.com/SandraK82/libBlueReader"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Sandra Keßler" => "sk@softwarehaus-kassel.de" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/libBlueReader.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/SandraK82/libBlueReader-iOS.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
@@ -34,7 +28,6 @@ Pod::Spec.new do |s|
     'libBlueReader' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.ios.framework = 'CoreBluetooth'
+  s.public_header_files = 'Pod/Classes/blueReader.h'
 end

@@ -1,0 +1,6 @@
+framework module libBlueReader {
+  umbrella header "libBlueReader-umbrella.h"
+
+  export *
+  module * { export * }
+}
