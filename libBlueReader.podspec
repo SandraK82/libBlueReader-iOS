@@ -8,19 +8,19 @@
 
 Pod::Spec.new do |s|
   s.name             = "libBlueReader"
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.summary          = "libBlueReader is the companion library to the open-source blueReader Hardware"
   s.description      = <<-DESC
 The blueReader NFC-BLE-Adapter is a ready to buy or diy Hardware for reading and writing nfc-tags via a bluetooth enabled Device. This library implements the interfaces for iOS to find a blueReader Bluetooth device, configure the device, and read/ write Tags
                        DESC
 
-  s.homepage         = "https://github.com/SandraK82/libBlueReader"
+  s.homepage         = "https://github.com/SandraK82/libBlueReader-iOS"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Sandra Keßler" => "sk@softwarehaus-kassel.de" }
   s.source           = { :git => "https://github.com/SandraK82/libBlueReader-iOS.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'

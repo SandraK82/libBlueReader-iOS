@@ -484,6 +484,8 @@ typedef enum
                                 else
                                 {
                                     DebugLog(@"somethign wrong here!");
+
+                                    [self.cmds addObject:@"?"];
                                 }
                         }
                     }
