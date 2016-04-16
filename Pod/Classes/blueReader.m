@@ -480,6 +480,14 @@ typedef enum
                                     {
                                         [self.delegate blueReaderIdentified:s error:nil];
                                     }
+                                    else if(cmd=='h')
+                                    {
+                                        self.readerStatus = UNKNOWN;
+                                        if([self.delegate respondsToSelector:@selector(blueReaderChangedStatus:)])
+                                        {
+                                            [self.delegate blueReaderChangedStatus:self.readerStatus];
+                                        }
+                                    }
                                 }
                                 else
                                 {
