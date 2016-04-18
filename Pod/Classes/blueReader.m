@@ -11,14 +11,6 @@
 #import "blueReader.h"
 #include "UARTPeripheral.h"
 
-typedef enum
-{
-    IDLE = 0,
-    SCANNING,
-    SHOULD_SCANNING,
-    CONNECTED,
-} ConnectionState;
-
 
 #define DebugLog(...) {if(self.consoleLogging)NSLog(__VA_ARGS__);}
 
