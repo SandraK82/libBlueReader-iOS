@@ -15,6 +15,15 @@ typedef NS_ENUM(NSInteger, BlueReaderStatus) {
     READY_FOR_TAG
 };
 
+typedef enum
+{
+    IDLE = 0,
+    SCANNING,
+    SHOULD_SCANNING,
+    CONNECTED,
+} ConnectionState;
+
+
 @protocol BlueReaderDelegate <NSObject>
 -(void) blueReaderFound:(NSString*) blueReader;
 -(void) blueReaderIdentified:(NSString*) blueReaderData error:(NSError*)error;
@@ -33,6 +42,7 @@ typedef NS_ENUM(NSInteger, BlueReaderStatus) {
 
 @property id<BlueReaderDelegate> delegate;
 @property (nonatomic) BOOL consoleLogging;
+@property ConnectionState state;
 
 -(id) initWithDelegate:(id<BlueReaderDelegate>)delegate;
 

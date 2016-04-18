@@ -24,7 +24,6 @@ typedef enum
 
 @interface BlueReader () <UARTPeripheralDelegate,CBCentralManagerDelegate>
 @property CBCentralManager *cm;
-@property ConnectionState state;
 @property UARTPeripheral *currentPeripheral;
 @property NSMutableDictionary* peripherals;
 @property BlueReaderStatus readerStatus;
