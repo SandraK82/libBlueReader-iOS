@@ -11,8 +11,9 @@
 #import "blueReader.h"
 #include "UARTPeripheral.h"
 
-
+#ifndef DebugLog
 #define DebugLog(...) {if(self.consoleLogging)NSLog(__VA_ARGS__);}
+#endif
 
 @interface BlueReader () <UARTPeripheralDelegate,CBCentralManagerDelegate>
 @property CBCentralManager *cm;
@@ -31,9 +32,6 @@
     if(self = [super init])
     {
         self.consoleLogging = NO;
-/*#ifdef DEBUG
-        self.consoleLogging = YES;
-#endif*/
         self.delegate = delegate;
         self.cm = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
     }
@@ -496,9 +494,26 @@
                     if(!cmd)
                     {
                         cmd=[string characterAtIndex:i];
-                        if(cmd == [[self.cmds objectAtIndex:0] characterAtIndex:0])
+                        if([self.cmds  count] == 0)
+                        {
+                            DebugLog(@"no cmd in queu, got anser %@",string);
+                        }
+                        else if(cmd == [[self.cmds objectAtIndex:0] characterAtIndex:0])
                         {
                             DebugLog(@"correct answer found :D");
+                        }
+                        else
+                        {
+                            for(int i = 1; i < [self.cmds count];i++)
+                            {
+                                string = @"";i=0;
+                                if([[self.cmds objectAtIndex:i] hasPrefix:[NSString stringWithFormat:@"%c",cmd]])
+                                {
+                                    DebugLog(@"found anser, but @ cmd %d in queue",i+1);
+                                    break;
+                                }
+                                DebugLog(@"not finding answer in queue");
+                            }
                         }
                     }
                     else if(cmd && [string characterAtIndex:i] == ':')
