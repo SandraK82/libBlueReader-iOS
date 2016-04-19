@@ -23,6 +23,8 @@
 @property NSMutableArray* cmds;
 @property BOOL handlingCmd;
 @property NSString* incompleteAnswer;
+@property NSTimer* timerout;
+
 @end
 
 @implementation BlueReader
@@ -138,6 +140,8 @@
         self.currentPeripheral = nil;
         self.cmds = nil;
         self.handlingCmd = NO;
+        self.incompleteAnswer=nil;
+
         self.readerStatus = UNKNOWN;
     }
 }
@@ -261,6 +265,16 @@
     [self handleCmd];
 }
 
+-(void) failed
+{
+    NSLog(@"failed to complete cmd %@ withhin timeout",[self.cmds objectAtIndex:0]);
+    [[self cmds] removeAllObjects];
+    self.handlingCmd = NO;
+    self.incompleteAnswer=nil;
+
+    [self closeConnection];
+}
+
 -(void) handleCmd
 {
     if(self.handlingCmd)
@@ -277,6 +291,7 @@
         NSString* firstCMD = [self.cmds objectAtIndex:0];
         [self.currentPeripheral writeString:firstCMD];
         self.handlingCmd = YES;
+        _timerout = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(failed) userInfo:nil repeats:NO];
     }
 }
 
@@ -335,6 +350,8 @@
                 {
                     foundStart = YES;
                     isOK = YES;
+                    [_timerout invalidate];
+                    _timerout = nil;
                 }
                 break;
             case '-':
@@ -342,6 +359,8 @@
                 {
                     foundStart = YES;
                     isOK = NO;
+                    [_timerout invalidate];
+                    _timerout = nil;
                 }
                 break;
             case '!':
