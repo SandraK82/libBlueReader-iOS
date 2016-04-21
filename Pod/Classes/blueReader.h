@@ -59,6 +59,7 @@ typedef enum
 -(BOOL) readyReader;
 -(BOOL) wake;
 -(void) hybernate;
+-(void) hybernate:(int)timedanswer;
 
 @end
 #endif /* blueReader_h */

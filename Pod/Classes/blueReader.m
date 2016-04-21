@@ -225,6 +225,19 @@
     }
     [self handleCmd];
 }
+-(void) hybernate:(int)timedanswer
+{
+    switch(self.readerStatus)
+    {
+        case UNKNOWN:
+            [self wake];
+        case ANSWERING:
+        case READY_FOR_TAG:
+            [self.cmds addObject:[NSString stringWithFormat:@"h:%#04x",timedanswer]];
+            break;
+    }
+    [self handleCmd];
+}
 -(void) readTag
 {
     switch(self.readerStatus)
