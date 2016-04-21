@@ -162,7 +162,9 @@
         self.currentPeripheral = [[UARTPeripheral alloc] initWithPeripheral:peripheral delegate:self];
         self.currentPeripheral.consoleLogging = self.consoleLogging;
         
-        [self.cm connectPeripheral:peripheral options:@{CBConnectPeripheralOptionNotifyOnDisconnectionKey: [NSNumber numberWithBool:YES]}];
+        [self.cm connectPeripheral:peripheral options:@{
+                                                        CBConnectPeripheralOptionNotifyOnNotificationKey: [NSNumber numberWithBool:YES],
+                                                        }];
     }
 }
 -(void) closeConnection
