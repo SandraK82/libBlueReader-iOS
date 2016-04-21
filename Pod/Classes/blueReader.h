@@ -43,6 +43,7 @@ typedef enum
 @property id<BlueReaderDelegate> delegate;
 @property (nonatomic) BOOL consoleLogging;
 @property ConnectionState state;
+@property BOOL keepAlive;
 
 -(id) initWithDelegate:(id<BlueReaderDelegate>)delegate;
 

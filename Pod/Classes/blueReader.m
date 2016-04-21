@@ -22,8 +22,9 @@
 @property BlueReaderStatus readerStatus;
 @property NSMutableArray* cmds;
 @property BOOL handlingCmd;
-@property NSString* incompleteAnswer;
-@property NSTimer* timerout;
+@property (nonatomic,strong) NSString* incompleteAnswer;
+@property (nonatomic,strong) NSTimer* timerout;
+@property (nonatomic,strong) NSString* lastsendcmd;
 
 @end
 
@@ -305,6 +306,7 @@
         DebugLog(@"having cmds: %@",[self.cmds description]);
         NSString* firstCMD = [self.cmds objectAtIndex:0];
         [self.currentPeripheral writeString:firstCMD];
+        self.lastsendcmd = firstCMD;
         self.handlingCmd = YES;
         _timerout = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(failed) userInfo:nil repeats:NO];
     }
@@ -352,6 +354,8 @@
     DebugLog(@"got read result: \"%@\"",string);
     BOOL foundStart = NO;
     BOOL isOK = NO;
+    BOOL noQueue = YES;
+
     char cmd = 0;
 
     NSMutableArray *parameters = [NSMutableArray new];
@@ -478,6 +482,10 @@
                                         [self.delegate blueReaderChangedStatus:self.readerStatus];
                                     }
                                 }
+                                if(self.keepAlive && [self.lastsendcmd hasPrefix:@"h"])
+                                {
+                                    [self.cmds addObject:[NSString stringWithFormat:@"h:%#04x",5]];
+                                }
                             }
                                 break;
                             default:
@@ -514,11 +522,23 @@
                                 }
                                 else
                                 {
+                                    if(self.keepAlive && [self.lastsendcmd hasPrefix:@"h"])
+                                    {
+                                        //[self.cmds addObject:[NSString stringWithFormat:@"h:%#04x",5]];
+                                        //ignore
+                                    }
+                                    else{
                                     DebugLog(@"somethign wrong here!");
 
                                     [self.cmds addObject:@"?"];
+                                    }
                                 }
                         }
+                    }
+
+                    if(!noQueue)
+                    {
+                        [self nextCMD];
                     }
                     break;
                 }
@@ -535,18 +555,19 @@
                         else if(cmd == [[self.cmds objectAtIndex:0] characterAtIndex:0])
                         {
                             DebugLog(@"correct answer found :D");
+                            noQueue = NO;
                         }
                         else
                         {
                             for(int i = 1; i < [self.cmds count];i++)
                             {
-                                string = @"";i=0;
                                 if([[self.cmds objectAtIndex:i] hasPrefix:[NSString stringWithFormat:@"%c",cmd]])
                                 {
                                     DebugLog(@"found anser, but @ cmd %d in queue",i+1);
                                     break;
                                 }
-                                DebugLog(@"not finding answer in queue");
+                                DebugLog(@"not finding answer %c in queue",cmd);
+                                self.handlingCmd = NO;
                             }
                         }
                     }
@@ -569,6 +590,6 @@
     {
         [self didReceiveData:string];
     }
-    [self nextCMD];
+    [self handleCmd];
 }
 @end

@@ -19,7 +19,8 @@
 {
     [super viewDidLoad];
 	self.blueReader = [[BlueReader alloc] initWithDelegate:self];
-//    self.blueReader.consoleLogging = NO;
+    self.blueReader.consoleLogging = YES;
+    self.blueReader.keepAlive = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,7 +45,6 @@
 -(void) blueReaderIdentified:(NSString*) blueReaderData error:(NSError*)error
 {
     NSLog(@"found blueReader: %@",blueReaderData);
-    [[self blueReader] readTag];
 }
 
 -(void) blueReaderGotData:(uint8_t)adr data:(NSData*)data error:(NSError*)error
@@ -64,6 +64,7 @@
 -(void) blueReaderClosedConnection:(NSString*)blueReader
 {
     NSLog(@"closed connection to %@",blueReader);
+    [[self blueReader] openConnection:blueReader];
 }
 
 -(void) blueReaderFoundTag:(NSData*)tag error:(NSError*)error
@@ -81,6 +82,7 @@
     }
     else
     {
+        [self.blueReader hybernate:10];
         NSLog(@"found no tag!");
     }
 }
@@ -90,6 +92,7 @@
     if(status == READY_FOR_TAG)
     {
         [[self blueReader] identifyReader];
+        [self.blueReader readTag];
     }
 }
 
