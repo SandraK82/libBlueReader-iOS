@@ -20,7 +20,6 @@
     [super viewDidLoad];
 	self.blueReader = [[BlueReader alloc] initWithDelegate:self];
     self.blueReader.consoleLogging = YES;
-    self.blueReader.keepAlive = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,6 +59,7 @@
 {
     NSLog(@"connected to: %@",blueReader);
     [[self blueReader] readyReader];
+    [self.blueReader startbeat:30];
 }
 -(void) blueReaderClosedConnection:(NSString*)blueReader
 {
@@ -82,7 +82,6 @@
     }
     else
     {
-        [self.blueReader hybernate:10];
         NSLog(@"found no tag!");
     }
 }

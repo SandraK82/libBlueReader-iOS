@@ -25,6 +25,7 @@
 @property (nonatomic,strong) NSString* incompleteAnswer;
 @property (nonatomic,strong) NSTimer* timerout;
 @property (nonatomic,strong) NSString* lastsendcmd;
+@property int beattime;
 
 @end
 
@@ -228,17 +229,15 @@
     }
     [self handleCmd];
 }
--(void) hybernate:(int)timedanswer
+-(void) stopbeat
 {
-    switch(self.readerStatus)
-    {
-        case UNKNOWN:
-            [self wake];
-        case ANSWERING:
-        case READY_FOR_TAG:
-            [self.cmds addObject:[NSString stringWithFormat:@"h:%#04x",timedanswer]];
-            break;
-    }
+    self.beattime = 0;
+}
+-(void) startbeat:(int)beattime
+{
+    self.beattime = beattime;
+    [self.cmds addObject:[NSString stringWithFormat:@"b:%#04x",beattime]];
+
     [self handleCmd];
 }
 -(void) readTag
@@ -459,6 +458,15 @@
                         //update state
                         switch(cmd)
                         {
+                            case 'b':
+                                DebugLog(@"started beat");
+                                break;
+                            case '.':
+                                DebugLog(@"got beat");
+                                if(self.beattime>0)
+                                    [self startbeat:self.beattime];
+                                break;
+
                             case '?':
                             {
                                 if(s)
@@ -481,10 +489,6 @@
                                     {
                                         [self.delegate blueReaderChangedStatus:self.readerStatus];
                                     }
-                                }
-                                if(self.keepAlive && [self.lastsendcmd hasPrefix:@"h"])
-                                {
-                                    [self.cmds addObject:[NSString stringWithFormat:@"h:%#04x",5]];
                                 }
                             }
                                 break;
@@ -522,16 +526,10 @@
                                 }
                                 else
                                 {
-                                    if(self.keepAlive && [self.lastsendcmd hasPrefix:@"h"])
-                                    {
-                                        //[self.cmds addObject:[NSString stringWithFormat:@"h:%#04x",5]];
-                                        //ignore
-                                    }
-                                    else{
                                     DebugLog(@"somethign wrong here!");
 
                                     [self.cmds addObject:@"?"];
-                                    }
+                                
                                 }
                         }
                     }
