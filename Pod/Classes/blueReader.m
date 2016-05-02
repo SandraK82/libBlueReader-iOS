@@ -282,8 +282,11 @@
 
 -(void) failed
 {
-    NSLog(@"failed to complete cmd %@ withhin timeout",[self.cmds objectAtIndex:0]);
-    [[self cmds] removeAllObjects];
+    if([self.cmds count])
+    {
+        NSLog(@"failed to complete cmd %@ withhin timeout",[self.cmds objectAtIndex:0]);
+        [[self cmds] removeAllObjects];
+    }
     self.handlingCmd = NO;
     self.incompleteAnswer=nil;
 
@@ -294,7 +297,8 @@
 {
     if(self.handlingCmd)
     {
-        DebugLog(@"already handling cmd %@",[self.cmds objectAtIndex:0]);
+        if([self.cmds count])
+            DebugLog(@"already handling cmd %@",[self.cmds objectAtIndex:0]);
     }
     else if([self.cmds count] == 0)
     {
@@ -307,7 +311,7 @@
         [self.currentPeripheral writeString:firstCMD];
         self.lastsendcmd = firstCMD;
         self.handlingCmd = YES;
-        _timerout = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(failed) userInfo:nil repeats:NO];
+        _timerout = [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(failed) userInfo:nil repeats:NO];
     }
 }
 
@@ -408,8 +412,12 @@
                                 b = b | [@"0123456789abcdef" rangeOfString:[NSString stringWithFormat:@"%c",[s characterAtIndex:i+1]]].location;
                                 [data appendBytes:&b length:1];
                             }
-                            uint16_t adr = [@"0123456789abcdef" rangeOfString:[NSString stringWithFormat:@"%c",[[self.cmds objectAtIndex:0] characterAtIndex:4]]].location << 4;
-                            adr = adr | [@"0123456789abcdef" rangeOfString:[NSString stringWithFormat:@"%c",[[self.cmds objectAtIndex:0] characterAtIndex:5]]].location;
+                            uint16_t adr = -1;
+                            if([self.cmds count] && [[self.cmds objectAtIndex:0]length]>5)
+                            {
+                                adr = [@"0123456789abcdef" rangeOfString:[NSString stringWithFormat:@"%c",[[self.cmds objectAtIndex:0] characterAtIndex:4]]].location << 4;
+                                adr = adr | [@"0123456789abcdef" rangeOfString:[NSString stringWithFormat:@"%c",[[self.cmds objectAtIndex:0] characterAtIndex:5]]].location;
+                            }
 
                             [self.delegate blueReaderGotData:adr data:data error:nil];
                         }
@@ -419,9 +427,13 @@
                             e = e << 4;
                             e = e | [@"0123456789abcdef" rangeOfString:[NSString stringWithFormat:@"%c",[s characterAtIndex:1]]].location;
 
-                            Byte adr = [@"0123456789abcdef" rangeOfString:[NSString stringWithFormat:@"%c",[[self.cmds objectAtIndex:0] characterAtIndex:5]]].location;
-                            adr = adr << 4;
-                            adr = adr | [@"0123456789abcdef" rangeOfString:[NSString stringWithFormat:@"%c",[[self.cmds objectAtIndex:0] characterAtIndex:5]]].location;
+                            uint16_t adr = -1;
+                            if([self.cmds count] && [[self.cmds objectAtIndex:0]length]>5)
+                            {
+                                adr = [@"0123456789abcdef" rangeOfString:[NSString stringWithFormat:@"%c",[[self.cmds objectAtIndex:0] characterAtIndex:4]]].location;
+                                adr = adr << 4;
+                                adr = adr | [@"0123456789abcdef" rangeOfString:[NSString stringWithFormat:@"%c",[[self.cmds objectAtIndex:0] characterAtIndex:5]]].location;
+                            }
 
                             [self.delegate blueReaderGotData:adr data:nil error:[NSError errorWithDomain:@"unable to read" code:e userInfo:nil]];
                         }
