@@ -178,8 +178,10 @@
             DebugLog(@"%x", bytes[i]);
             hwRevision = [hwRevision stringByAppendingFormat:@"0x%02x, ", bytes[i]];
         }
-        
-        [self.delegate didReadHardwareRevisionString:[hwRevision substringToIndex:hwRevision.length-2]];
+        if([self.delegate respondsToSelector:@selector(didReadHardwareRevisionString:)])
+        {
+            [self.delegate didReadHardwareRevisionString:[hwRevision substringToIndex:hwRevision.length-2]];
+        }
     }
 }
 @end

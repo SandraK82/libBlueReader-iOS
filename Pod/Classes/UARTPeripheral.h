@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@protocol UARTPeripheralDelegate
+@protocol UARTPeripheralDelegate <NSObject>
 - (void) didReceiveData:(NSString *) string;
 - (void) peripheralReady;
 
