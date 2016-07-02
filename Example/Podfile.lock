@@ -1,5 +1,5 @@
 PODS:
-  - libBlueReader (0.0.1)
+  - libBlueReader (0.1.0)
 
 DEPENDENCIES:
   - libBlueReader (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  libBlueReader: 4323d263085f779a86768395d014adb45ffe0e5f
+  libBlueReader: dfe9d3c660f78fb55a39908382d58197c4f1c33b
 
-COCOAPODS: 0.38.2
+PODFILE CHECKSUM: e07db615bcba2921c1edaffbdc9976391dc3fc10
+
+COCOAPODS: 1.0.1

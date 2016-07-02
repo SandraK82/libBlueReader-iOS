@@ -2,7 +2,7 @@
 //  libBlueReaderTests.m
 //  libBlueReaderTests
 //
-//  Created by Sandra Keßler on 04/13/2016.
+//  Created by Sandra Keßler on 07/02/2016.
 //  Copyright (c) 2016 Sandra Keßler. All rights reserved.
 //
 

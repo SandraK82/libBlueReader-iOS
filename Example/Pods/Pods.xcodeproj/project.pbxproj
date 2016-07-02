@@ -7,155 +7,123 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F0CDA428A46A1652DACFD11A8FFC60C /* libBlueReader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A59907AF2648C16C5DD31F51D8B134 /* libBlueReader-dummy.m */; };
-		495A0EF91ED97569101BAADED016A9CC /* blueReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BBE5FA328F2554ADC56FA3C61575BEB /* blueReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56F21463BFD47A750A9E303E58048E50 /* libBlueReader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9AA265111A0BB854E94049F1637C617B /* libBlueReader.bundle */; };
-		57D6E19D6EA7BBA41D9163BF0EFEBEFD /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B476E27683B7F197476A20684D55AB69 /* CoreBluetooth.framework */; };
-		7271BAE86865C11F8EF9234CBC347906 /* UARTPeripheral.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B26903D6EDA8716BFBD8FCDD7F537A /* UARTPeripheral.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A28D3DD5EC6527AED0A85881C3612236 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C898AC9475105FF16722FFF75385E8C5 /* Foundation.framework */; };
-		ADE76D20FD1A95DF458833054BD0D989 /* libBlueReader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C70987555E2AC8C56505E5E8449AD10 /* libBlueReader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B62E12E99967604198CB82F7D66EC683 /* UARTPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E948000200C9067A129B381DE062E35 /* UARTPeripheral.m */; };
-		B89AF55BA52673DB77EF3D33FD7CCC29 /* Pods-libBlueReader_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2B6124BA49C2EA6A2296CA5127E6C3F /* Pods-libBlueReader_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD858E20D35FB0B898B243A0C94AD616 /* Pods-libBlueReader_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9C20AA1A08887D531009DBEA864937 /* Pods-libBlueReader_Tests-dummy.m */; };
-		D776DE533D897851777AE25089FA113D /* Pods-libBlueReader_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0A77CD451384D1A8535F9A8387CEE45 /* Pods-libBlueReader_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D88A2AF11EBF7ABA8F093FC9F912C3D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C898AC9475105FF16722FFF75385E8C5 /* Foundation.framework */; };
-		DD0893FFC984803AED9BB8371D44CE3E /* Pods-libBlueReader_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A7389B85CB0BD455998E6EF552D22F /* Pods-libBlueReader_Example-dummy.m */; };
-		E65A322D40B94135BEDBDE48E91A74C5 /* blueReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 71307750D1CDBC616845110157A879D5 /* blueReader.m */; };
-		EEAB6FFCF928CF5ED89915F624698D7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C898AC9475105FF16722FFF75385E8C5 /* Foundation.framework */; };
+		067EF18B22ED0CE56047CC9BD6C8DA9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		097D0AA4E0A243568EF8B4B543762B6D /* libBlueReader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F964CF98F7EDEA2F74ECC7F6CE686AF2 /* libBlueReader-dummy.m */; };
+		0F65E4717C028E386863E7F9BE87AAC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		201065D116D93E8B91867B55271F860E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		448436B5410DA95AE6F89E7ABC62A514 /* Pods-libBlueReader_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8054A72B5FC937B9F59F7F5BDD8F43C5 /* Pods-libBlueReader_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E3A1C3145C620095FF655208E8D67F0 /* libBlueReader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1EB51EC1E51318FFA396E5190EA99A /* libBlueReader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F134261F6859BCCF2AB0F51A980356A /* Pods-libBlueReader_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9903BB036499002607877C29897CF097 /* Pods-libBlueReader_Tests-dummy.m */; };
+		831CCBD3FB813F53C591BDB832E9E3BD /* Pods-libBlueReader_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E274010497CA4662B3672DEFA28985C2 /* Pods-libBlueReader_Example-dummy.m */; };
+		DAB11E0761C6F177E0FA1DE8D07224E7 /* Pods-libBlueReader_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FAE706719E5BC698C644AD8100FD3DA /* Pods-libBlueReader_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4510A2068DDDB3E076A4E5B9093E067 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 652E66D869D4F7DDA2D6DFCA3D6F3358 /* ReplaceMe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0D2D5B62F3047EFB841958F62E8D38A6 /* PBXContainerItemProxy */ = {
+		A76C1979B97ACCDCCBCC32C8476E1B5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DA618B8924F52F764C6FC2CD5B42C32B;
+			remoteGlobalIDString = 0C99FB5F083CFFDC2CEBF8CC58D35FA6;
 			remoteInfo = libBlueReader;
-		};
-		D7F859DF786BD169D96123DFB7E45586 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DA618B8924F52F764C6FC2CD5B42C32B;
-			remoteInfo = libBlueReader;
-		};
-		F8AFD9D991FA682C3188E95097EEA222 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A4F5773EFDE9F9F23063557F15754892;
-			remoteInfo = "libBlueReader-libBlueReader";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0057C828C8D9FA1A490638BD9CCB4DC8 /* Pods-libBlueReader_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-libBlueReader_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		105172064923E3383C7E416A089DF4F8 /* Pods-libBlueReader_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-libBlueReader_Example-frameworks.sh"; sourceTree = "<group>"; };
-		10A7389B85CB0BD455998E6EF552D22F /* Pods-libBlueReader_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-libBlueReader_Example-dummy.m"; sourceTree = "<group>"; };
 		139D22759549BD1DCF9D3EE89889BED4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20A59907AF2648C16C5DD31F51D8B134 /* libBlueReader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "libBlueReader-dummy.m"; sourceTree = "<group>"; };
-		20C6CCE0C1B2E45DDC1521BBA8443012 /* Pods_libBlueReader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libBlueReader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20A9158D05F1C87B784C72014E31784D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25AE9AEF2AFAA33251B19D2824CF4DB6 /* Pods-libBlueReader_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-libBlueReader_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2C79C514D3752B3979963570F642B8AF /* Pods_libBlueReader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libBlueReader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDEEFE6741CFDD62BD0A7E00750B1F0 /* Pods-libBlueReader_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-libBlueReader_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4E948000200C9067A129B381DE062E35 /* UARTPeripheral.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UARTPeripheral.m; sourceTree = "<group>"; };
-		55ED1C2EC56C0812E1C799841B1D804B /* Pods_libBlueReader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libBlueReader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		67E4EA61077954ABC7D066A8BE70260B /* libBlueReader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = libBlueReader.modulemap; sourceTree = "<group>"; };
-		6BBE5FA328F2554ADC56FA3C61575BEB /* blueReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = blueReader.h; sourceTree = "<group>"; };
-		6C70987555E2AC8C56505E5E8449AD10 /* libBlueReader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libBlueReader-umbrella.h"; sourceTree = "<group>"; };
+		52572C792B69120BC86E1807726B2EAC /* Pods-libBlueReader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-libBlueReader_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		52B57DD413D32549EC17111315F8A714 /* libBlueReader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libBlueReader.xcconfig; sourceTree = "<group>"; };
+		652E66D869D4F7DDA2D6DFCA3D6F3358 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
+		6FAE706719E5BC698C644AD8100FD3DA /* Pods-libBlueReader_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-libBlueReader_Example-umbrella.h"; sourceTree = "<group>"; };
 		70A92171DEB8EC78012E6419ED81F43E /* Pods-libBlueReader_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-libBlueReader_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		70B595C60EACEDCBC06180E53B061078 /* Pods-libBlueReader_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-libBlueReader_Example-resources.sh"; sourceTree = "<group>"; };
-		71307750D1CDBC616845110157A879D5 /* blueReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = blueReader.m; sourceTree = "<group>"; };
 		738A763D5E1BAAE1EF945D9D6B3E96B1 /* Pods-libBlueReader_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-libBlueReader_Tests-resources.sh"; sourceTree = "<group>"; };
-		7BBBC8B5559086FAC96C38A6305C1F8B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8118D4BECF4C9F7986603D92E2968374 /* Pods-libBlueReader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-libBlueReader_Example.release.xcconfig"; sourceTree = "<group>"; };
+		763776EF06FC4BB9C9D1F13265654B2C /* libBlueReader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libBlueReader-prefix.pch"; sourceTree = "<group>"; };
+		8054A72B5FC937B9F59F7F5BDD8F43C5 /* Pods-libBlueReader_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-libBlueReader_Tests-umbrella.h"; sourceTree = "<group>"; };
 		87AB834E5EFA40B4658247AB9A6F334C /* Pods-libBlueReader_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-libBlueReader_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8DB22BC6A86D282AB24FC794968302FD /* Pods-libBlueReader_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-libBlueReader_Tests.modulemap"; sourceTree = "<group>"; };
-		97B26903D6EDA8716BFBD8FCDD7F537A /* UARTPeripheral.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UARTPeripheral.h; sourceTree = "<group>"; };
-		9888355E0AC47620A30C28E7AC7EEA11 /* Pods-libBlueReader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-libBlueReader_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9AA265111A0BB854E94049F1637C617B /* libBlueReader.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libBlueReader.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98646D7B8972732E375C6452CAD7AF2D /* Pods-libBlueReader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-libBlueReader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9903BB036499002607877C29897CF097 /* Pods-libBlueReader_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-libBlueReader_Tests-dummy.m"; sourceTree = "<group>"; };
 		9F0B81317ACCDCA9003BD266A7351703 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8A53900913D827C0A2C53EE1D4B2BE7 /* Pods-libBlueReader_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-libBlueReader_Example.modulemap"; sourceTree = "<group>"; };
-		B0AD14289BE56A555ACB76A0EA044559 /* libBlueReader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libBlueReader.xcconfig; sourceTree = "<group>"; };
-		B476E27683B7F197476A20684D55AB69 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
-		B7000551CC84E259BB31080307B97EC0 /* Pods-libBlueReader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-libBlueReader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C0A77CD451384D1A8535F9A8387CEE45 /* Pods-libBlueReader_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-libBlueReader_Example-umbrella.h"; sourceTree = "<group>"; };
-		C66DA537D71809D36443AA9857C422A6 /* libBlueReader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libBlueReader-prefix.pch"; sourceTree = "<group>"; };
-		C898AC9475105FF16722FFF75385E8C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CC9C20AA1A08887D531009DBEA864937 /* Pods-libBlueReader_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-libBlueReader_Tests-dummy.m"; sourceTree = "<group>"; };
-		DFDA1DF8AFB67CE0177F0CCC8C2E4395 /* libBlueReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libBlueReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2B6124BA49C2EA6A2296CA5127E6C3F /* Pods-libBlueReader_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-libBlueReader_Tests-umbrella.h"; sourceTree = "<group>"; };
-		E7894932DCD81F2298F7123A11268EB6 /* libBlueReader-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "libBlueReader-Private.xcconfig"; sourceTree = "<group>"; };
-		EAAFF77B094B403EC49807B36192C077 /* Pods-libBlueReader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-libBlueReader_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AE2018392C3760545B20813780C14FB3 /* Pods-libBlueReader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-libBlueReader_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CF606AC74ED62C531DB4FF636FEC8707 /* Pods-libBlueReader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-libBlueReader_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D1A3B18B9573D0547CF289CF2643889A /* Pods_libBlueReader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libBlueReader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E274010497CA4662B3672DEFA28985C2 /* Pods-libBlueReader_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-libBlueReader_Example-dummy.m"; sourceTree = "<group>"; };
+		E99BDDCFB03FCB547A42DCD1071CBD6F /* libBlueReader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = libBlueReader.modulemap; sourceTree = "<group>"; };
+		F86C91D0953AA7749ADD0745E8459431 /* libBlueReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libBlueReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F964CF98F7EDEA2F74ECC7F6CE686AF2 /* libBlueReader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "libBlueReader-dummy.m"; sourceTree = "<group>"; };
+		FF1EB51EC1E51318FFA396E5190EA99A /* libBlueReader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libBlueReader-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		209B934AC69D7722BF874F6AF445D36B /* Frameworks */ = {
+		6DF33E768C7FEA2DA111B741511A8872 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				067EF18B22ED0CE56047CC9BD6C8DA9A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F204B6D085718364943EE8D19BCA24D /* Frameworks */ = {
+		CEE97517C38DDAB2A4320A76DC61EF93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57D6E19D6EA7BBA41D9163BF0EFEBEFD /* CoreBluetooth.framework in Frameworks */,
-				A28D3DD5EC6527AED0A85881C3612236 /* Foundation.framework in Frameworks */,
+				201065D116D93E8B91867B55271F860E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4A146642B434C9335D4D11F147929963 /* Frameworks */ = {
+		E99560498480E0765C2015AAC9E37D25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D88A2AF11EBF7ABA8F093FC9F912C3D7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B7187D706B759CF2937B30C1BA11B05F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EEAB6FFCF928CF5ED89915F624698D7C /* Foundation.framework in Frameworks */,
+				0F65E4717C028E386863E7F9BE87AAC8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38365637FE58574A53FFA748FF201F3D /* Pod */ = {
+		0957863C8FF8441ECFB5F054253B35ED /* libBlueReader */ = {
 			isa = PBXGroup;
 			children = (
-				CA5CB59AEFDCD7478E4C3F5C7B5E6DF9 /* Classes */,
+				968ADC27AC9C1BCD33706E8A136648F9 /* Classes */,
 			);
-			path = Pod;
+			path = libBlueReader;
 			sourceTree = "<group>";
 		};
-		3AB47E684ED3536EAACF50AF4CAF872D /* libBlueReader */ = {
+		1B673D317CC1FE11C8A5F55F51D76F12 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38365637FE58574A53FFA748FF201F3D /* Pod */,
-				CDAB430FE0017928665E544460FB55E5 /* Support Files */,
+				F86C91D0953AA7749ADD0745E8459431 /* libBlueReader.framework */,
+				2C79C514D3752B3979963570F642B8AF /* Pods_libBlueReader_Example.framework */,
+				D1A3B18B9573D0547CF289CF2643889A /* Pods_libBlueReader_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DDF04538F2C90DA503C7A1CFA2A75B6 /* libBlueReader */ = {
+			isa = PBXGroup;
+			children = (
+				0957863C8FF8441ECFB5F054253B35ED /* libBlueReader */,
+				7FFD15B71488F22E30111B63724A0536 /* Support Files */,
 			);
 			name = libBlueReader;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				4C80BA738D6CDA6C25E2CBED501855B1 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4C80BA738D6CDA6C25E2CBED501855B1 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				B476E27683B7F197476A20684D55AB69 /* CoreBluetooth.framework */,
-				C898AC9475105FF16722FFF75385E8C5 /* Foundation.framework */,
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -167,12 +135,12 @@
 				A8A53900913D827C0A2C53EE1D4B2BE7 /* Pods-libBlueReader_Example.modulemap */,
 				2FDEEFE6741CFDD62BD0A7E00750B1F0 /* Pods-libBlueReader_Example-acknowledgements.markdown */,
 				0057C828C8D9FA1A490638BD9CCB4DC8 /* Pods-libBlueReader_Example-acknowledgements.plist */,
-				10A7389B85CB0BD455998E6EF552D22F /* Pods-libBlueReader_Example-dummy.m */,
+				E274010497CA4662B3672DEFA28985C2 /* Pods-libBlueReader_Example-dummy.m */,
 				105172064923E3383C7E416A089DF4F8 /* Pods-libBlueReader_Example-frameworks.sh */,
 				70B595C60EACEDCBC06180E53B061078 /* Pods-libBlueReader_Example-resources.sh */,
-				C0A77CD451384D1A8535F9A8387CEE45 /* Pods-libBlueReader_Example-umbrella.h */,
-				9888355E0AC47620A30C28E7AC7EEA11 /* Pods-libBlueReader_Example.debug.xcconfig */,
-				8118D4BECF4C9F7986603D92E2968374 /* Pods-libBlueReader_Example.release.xcconfig */,
+				6FAE706719E5BC698C644AD8100FD3DA /* Pods-libBlueReader_Example-umbrella.h */,
+				CF606AC74ED62C531DB4FF636FEC8707 /* Pods-libBlueReader_Example.debug.xcconfig */,
+				AE2018392C3760545B20813780C14FB3 /* Pods-libBlueReader_Example.release.xcconfig */,
 			);
 			name = "Pods-libBlueReader_Example";
 			path = "Target Support Files/Pods-libBlueReader_Example";
@@ -185,12 +153,12 @@
 				8DB22BC6A86D282AB24FC794968302FD /* Pods-libBlueReader_Tests.modulemap */,
 				25AE9AEF2AFAA33251B19D2824CF4DB6 /* Pods-libBlueReader_Tests-acknowledgements.markdown */,
 				87AB834E5EFA40B4658247AB9A6F334C /* Pods-libBlueReader_Tests-acknowledgements.plist */,
-				CC9C20AA1A08887D531009DBEA864937 /* Pods-libBlueReader_Tests-dummy.m */,
+				9903BB036499002607877C29897CF097 /* Pods-libBlueReader_Tests-dummy.m */,
 				70A92171DEB8EC78012E6419ED81F43E /* Pods-libBlueReader_Tests-frameworks.sh */,
 				738A763D5E1BAAE1EF945D9D6B3E96B1 /* Pods-libBlueReader_Tests-resources.sh */,
-				E2B6124BA49C2EA6A2296CA5127E6C3F /* Pods-libBlueReader_Tests-umbrella.h */,
-				B7000551CC84E259BB31080307B97EC0 /* Pods-libBlueReader_Tests.debug.xcconfig */,
-				EAAFF77B094B403EC49807B36192C077 /* Pods-libBlueReader_Tests.release.xcconfig */,
+				8054A72B5FC937B9F59F7F5BDD8F43C5 /* Pods-libBlueReader_Tests-umbrella.h */,
+				98646D7B8972732E375C6452CAD7AF2D /* Pods-libBlueReader_Tests.debug.xcconfig */,
+				52572C792B69120BC86E1807726B2EAC /* Pods-libBlueReader_Tests.release.xcconfig */,
 			);
 			name = "Pods-libBlueReader_Tests";
 			path = "Target Support Files/Pods-libBlueReader_Tests";
@@ -199,57 +167,50 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				9FEF542532ED707606913738DD666677 /* Development Pods */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1B673D317CC1FE11C8A5F55F51D76F12 /* Products */,
 				DB765BEE8B57D3843E37BE9EB85AB6D7 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7FFD15B71488F22E30111B63724A0536 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				20A9158D05F1C87B784C72014E31784D /* Info.plist */,
+				E99BDDCFB03FCB547A42DCD1071CBD6F /* libBlueReader.modulemap */,
+				52B57DD413D32549EC17111315F8A714 /* libBlueReader.xcconfig */,
+				F964CF98F7EDEA2F74ECC7F6CE686AF2 /* libBlueReader-dummy.m */,
+				763776EF06FC4BB9C9D1F13265654B2C /* libBlueReader-prefix.pch */,
+				FF1EB51EC1E51318FFA396E5190EA99A /* libBlueReader-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/libBlueReader";
+			sourceTree = "<group>";
+		};
+		968ADC27AC9C1BCD33706E8A136648F9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				652E66D869D4F7DDA2D6DFCA3D6F3358 /* ReplaceMe.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		9FEF542532ED707606913738DD666677 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3AB47E684ED3536EAACF50AF4CAF872D /* libBlueReader */,
+				1DDF04538F2C90DA503C7A1CFA2A75B6 /* libBlueReader */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		CA5CB59AEFDCD7478E4C3F5C7B5E6DF9 /* Classes */ = {
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				97B26903D6EDA8716BFBD8FCDD7F537A /* UARTPeripheral.h */,
-				4E948000200C9067A129B381DE062E35 /* UARTPeripheral.m */,
-				6BBE5FA328F2554ADC56FA3C61575BEB /* blueReader.h */,
-				71307750D1CDBC616845110157A879D5 /* blueReader.m */,
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
 			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				55ED1C2EC56C0812E1C799841B1D804B /* Pods_libBlueReader_Example.framework */,
-				20C6CCE0C1B2E45DDC1521BBA8443012 /* Pods_libBlueReader_Tests.framework */,
-				9AA265111A0BB854E94049F1637C617B /* libBlueReader.bundle */,
-				DFDA1DF8AFB67CE0177F0CCC8C2E4395 /* libBlueReader.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CDAB430FE0017928665E544460FB55E5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7BBBC8B5559086FAC96C38A6305C1F8B /* Info.plist */,
-				67E4EA61077954ABC7D066A8BE70260B /* libBlueReader.modulemap */,
-				B0AD14289BE56A555ACB76A0EA044559 /* libBlueReader.xcconfig */,
-				E7894932DCD81F2298F7123A11268EB6 /* libBlueReader-Private.xcconfig */,
-				20A59907AF2648C16C5DD31F51D8B134 /* libBlueReader-dummy.m */,
-				C66DA537D71809D36443AA9857C422A6 /* libBlueReader-prefix.pch */,
-				6C70987555E2AC8C56505E5E8449AD10 /* libBlueReader-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/libBlueReader";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DB765BEE8B57D3843E37BE9EB85AB6D7 /* Targets Support Files */ = {
@@ -264,105 +225,83 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2494ED445DB6AB69063C6E26276387A3 /* Headers */ = {
+		73D000BCFB42881A382DBF2A7D52EECE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7271BAE86865C11F8EF9234CBC347906 /* UARTPeripheral.h in Headers */,
-				495A0EF91ED97569101BAADED016A9CC /* blueReader.h in Headers */,
-				ADE76D20FD1A95DF458833054BD0D989 /* libBlueReader-umbrella.h in Headers */,
+				4E3A1C3145C620095FF655208E8D67F0 /* libBlueReader-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A390CC6112F528095DDEE3994E601D0 /* Headers */ = {
+		79837E79200AFFA1B705B97D3ADF4D38 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D776DE533D897851777AE25089FA113D /* Pods-libBlueReader_Example-umbrella.h in Headers */,
+				DAB11E0761C6F177E0FA1DE8D07224E7 /* Pods-libBlueReader_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB67075E9458FFB16DE51AF530BF27A3 /* Headers */ = {
+		DAD52A215709464B024581BB3E6B9292 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B89AF55BA52673DB77EF3D33FD7CCC29 /* Pods-libBlueReader_Tests-umbrella.h in Headers */,
+				448436B5410DA95AE6F89E7ABC62A514 /* Pods-libBlueReader_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		16D8B8DE382C854A437980E08ACF5D00 /* Pods-libBlueReader_Example */ = {
+		0C99FB5F083CFFDC2CEBF8CC58D35FA6 /* libBlueReader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A674768AC5ED6D892A6CBFFDFD112BEE /* Build configuration list for PBXNativeTarget "Pods-libBlueReader_Example" */;
+			buildConfigurationList = 6CF300D1260C984B6A84F51A9F3327B8 /* Build configuration list for PBXNativeTarget "libBlueReader" */;
 			buildPhases = (
-				DD42295A78ADFD8237F8427B531FCD24 /* Sources */,
-				B7187D706B759CF2937B30C1BA11B05F /* Frameworks */,
-				8A390CC6112F528095DDEE3994E601D0 /* Headers */,
+				C8DA2632D0ABF75C6B72E878C5CA3AB2 /* Sources */,
+				CEE97517C38DDAB2A4320A76DC61EF93 /* Frameworks */,
+				73D000BCFB42881A382DBF2A7D52EECE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7895253AF015D426117ADBF3EBFFC545 /* PBXTargetDependency */,
-			);
-			name = "Pods-libBlueReader_Example";
-			productName = "Pods-libBlueReader_Example";
-			productReference = 55ED1C2EC56C0812E1C799841B1D804B /* Pods_libBlueReader_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		342855307C6C221FAC9411931F51D3D9 /* Pods-libBlueReader_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4753BF9D027169868397B9AC7C79EBC /* Build configuration list for PBXNativeTarget "Pods-libBlueReader_Tests" */;
-			buildPhases = (
-				C59DB553FCF5CB8D519FA516D0DED0AF /* Sources */,
-				4A146642B434C9335D4D11F147929963 /* Frameworks */,
-				EB67075E9458FFB16DE51AF530BF27A3 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C05B7789FEAD941393E2F81C98B2CB83 /* PBXTargetDependency */,
-			);
-			name = "Pods-libBlueReader_Tests";
-			productName = "Pods-libBlueReader_Tests";
-			productReference = 20C6CCE0C1B2E45DDC1521BBA8443012 /* Pods_libBlueReader_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A4F5773EFDE9F9F23063557F15754892 /* libBlueReader-libBlueReader */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EB94B33E8C5EB97742D107909B2AD878 /* Build configuration list for PBXNativeTarget "libBlueReader-libBlueReader" */;
-			buildPhases = (
-				EE7366429BFE6DD1885FB7DD75096A75 /* Sources */,
-				209B934AC69D7722BF874F6AF445D36B /* Frameworks */,
-				E6AF14750410FC5169948D36D60A7916 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "libBlueReader-libBlueReader";
-			productName = "libBlueReader-libBlueReader";
-			productReference = 9AA265111A0BB854E94049F1637C617B /* libBlueReader.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		DA618B8924F52F764C6FC2CD5B42C32B /* libBlueReader */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ADCE7E7CEA78D1C4A3F244600FFB8F25 /* Build configuration list for PBXNativeTarget "libBlueReader" */;
-			buildPhases = (
-				76E8FADECB74F0F66BC5C028718ACEA9 /* Sources */,
-				3F204B6D085718364943EE8D19BCA24D /* Frameworks */,
-				0998DF62FB47FABAC4CEC41C814AE849 /* Resources */,
-				2494ED445DB6AB69063C6E26276387A3 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4E846F8F7B82FCBC52B5897AB9AE7AF9 /* PBXTargetDependency */,
 			);
 			name = libBlueReader;
 			productName = libBlueReader;
-			productReference = DFDA1DF8AFB67CE0177F0CCC8C2E4395 /* libBlueReader.framework */;
+			productReference = F86C91D0953AA7749ADD0745E8459431 /* libBlueReader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		81931632B0DAB8BD5563B2F5A7BFF597 /* Pods-libBlueReader_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8E8C3838DC347B68C9124987ACCB00A /* Build configuration list for PBXNativeTarget "Pods-libBlueReader_Example" */;
+			buildPhases = (
+				0134DF39A80344CE6B5421C8E40B294B /* Sources */,
+				E99560498480E0765C2015AAC9E37D25 /* Frameworks */,
+				79837E79200AFFA1B705B97D3ADF4D38 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				002C78A57EC1393D2E329065CE47FCBA /* PBXTargetDependency */,
+			);
+			name = "Pods-libBlueReader_Example";
+			productName = "Pods-libBlueReader_Example";
+			productReference = 2C79C514D3752B3979963570F642B8AF /* Pods_libBlueReader_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E8C013F3B336EF0860BCDC2A78288374 /* Pods-libBlueReader_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E275FB5D070D6488FDEF473FD195B05B /* Build configuration list for PBXNativeTarget "Pods-libBlueReader_Tests" */;
+			buildPhases = (
+				0FF7EE4B18FACAF35D90CA0372909B4A /* Sources */,
+				6DF33E768C7FEA2DA111B741511A8872 /* Frameworks */,
+				DAD52A215709464B024581BB3E6B9292 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-libBlueReader_Tests";
+			productName = "Pods-libBlueReader_Tests";
+			productReference = D1A3B18B9573D0547CF289CF2643889A /* Pods_libBlueReader_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -371,7 +310,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -382,98 +321,60 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			productRefGroup = 1B673D317CC1FE11C8A5F55F51D76F12 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				16D8B8DE382C854A437980E08ACF5D00 /* Pods-libBlueReader_Example */,
-				342855307C6C221FAC9411931F51D3D9 /* Pods-libBlueReader_Tests */,
-				DA618B8924F52F764C6FC2CD5B42C32B /* libBlueReader */,
-				A4F5773EFDE9F9F23063557F15754892 /* libBlueReader-libBlueReader */,
+				0C99FB5F083CFFDC2CEBF8CC58D35FA6 /* libBlueReader */,
+				81931632B0DAB8BD5563B2F5A7BFF597 /* Pods-libBlueReader_Example */,
+				E8C013F3B336EF0860BCDC2A78288374 /* Pods-libBlueReader_Tests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		0998DF62FB47FABAC4CEC41C814AE849 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				56F21463BFD47A750A9E303E58048E50 /* libBlueReader.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E6AF14750410FC5169948D36D60A7916 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		76E8FADECB74F0F66BC5C028718ACEA9 /* Sources */ = {
+		0134DF39A80344CE6B5421C8E40B294B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B62E12E99967604198CB82F7D66EC683 /* UARTPeripheral.m in Sources */,
-				E65A322D40B94135BEDBDE48E91A74C5 /* blueReader.m in Sources */,
-				0F0CDA428A46A1652DACFD11A8FFC60C /* libBlueReader-dummy.m in Sources */,
+				831CCBD3FB813F53C591BDB832E9E3BD /* Pods-libBlueReader_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C59DB553FCF5CB8D519FA516D0DED0AF /* Sources */ = {
+		0FF7EE4B18FACAF35D90CA0372909B4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD858E20D35FB0B898B243A0C94AD616 /* Pods-libBlueReader_Tests-dummy.m in Sources */,
+				7F134261F6859BCCF2AB0F51A980356A /* Pods-libBlueReader_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD42295A78ADFD8237F8427B531FCD24 /* Sources */ = {
+		C8DA2632D0ABF75C6B72E878C5CA3AB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD0893FFC984803AED9BB8371D44CE3E /* Pods-libBlueReader_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EE7366429BFE6DD1885FB7DD75096A75 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				097D0AA4E0A243568EF8B4B543762B6D /* libBlueReader-dummy.m in Sources */,
+				F4510A2068DDDB3E076A4E5B9093E067 /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4E846F8F7B82FCBC52B5897AB9AE7AF9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "libBlueReader-libBlueReader";
-			target = A4F5773EFDE9F9F23063557F15754892 /* libBlueReader-libBlueReader */;
-			targetProxy = F8AFD9D991FA682C3188E95097EEA222 /* PBXContainerItemProxy */;
-		};
-		7895253AF015D426117ADBF3EBFFC545 /* PBXTargetDependency */ = {
+		002C78A57EC1393D2E329065CE47FCBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = libBlueReader;
-			target = DA618B8924F52F764C6FC2CD5B42C32B /* libBlueReader */;
-			targetProxy = 0D2D5B62F3047EFB841958F62E8D38A6 /* PBXContainerItemProxy */;
-		};
-		C05B7789FEAD941393E2F81C98B2CB83 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libBlueReader;
-			target = DA618B8924F52F764C6FC2CD5B42C32B /* libBlueReader */;
-			targetProxy = D7F859DF786BD169D96123DFB7E45586 /* PBXContainerItemProxy */;
+			target = 0C99FB5F083CFFDC2CEBF8CC58D35FA6 /* libBlueReader */;
+			targetProxy = A76C1979B97ACCDCCBCC32C8476E1B5C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
+		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -490,41 +391,110 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		04228C9C39E297655E0A0CA0F1DFB89F /* Debug */ = {
+		323F6F111D18F02C915555DAC992E28A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9888355E0AC47620A30C28E7AC7EEA11 /* Pods-libBlueReader_Example.debug.xcconfig */;
+			baseConfigurationReference = 52B57DD413D32549EC17111315F8A714 /* libBlueReader.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-libBlueReader_Example/Info.plist";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/libBlueReader/libBlueReader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/libBlueReader/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-libBlueReader_Example/Pods-libBlueReader_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/libBlueReader/libBlueReader.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = libBlueReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		732113345D00A407F3FD98583A30890A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52572C792B69120BC86E1807726B2EAC /* Pods-libBlueReader_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-libBlueReader_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-libBlueReader_Tests/Pods-libBlueReader_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_libBlueReader_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		822CD4A1D1AD1D5F2514286BC66914DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98646D7B8972732E375C6452CAD7AF2D /* Pods-libBlueReader_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-libBlueReader_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-libBlueReader_Tests/Pods-libBlueReader_Tests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_libBlueReader_Example;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_libBlueReader_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -533,10 +503,44 @@
 			};
 			name = Debug;
 		};
-		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
+		C040D665299D7290A4819AD191AABD80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE2018392C3760545B20813780C14FB3 /* Pods-libBlueReader_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-libBlueReader_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-libBlueReader_Example/Pods-libBlueReader_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_libBlueReader_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -551,10 +555,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -565,31 +571,33 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		147EC6E7DD326AF33841714761EB8F95 /* Release */ = {
+		E1A55BFD6C2A17AFB8BA160A59779E85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7894932DCD81F2298F7123A11268EB6 /* libBlueReader-Private.xcconfig */;
+			baseConfigurationReference = 52B57DD413D32549EC17111315F8A714 /* libBlueReader.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.0.1;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.0.1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/libBlueReader/libBlueReader-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/libBlueReader/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/libBlueReader/libBlueReader.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = libBlueReader;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -597,138 +605,33 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		47F128613EAA77685FAFACCAACD61FE5 /* Release */ = {
+		F520A3C035A1E42392D891FA4B328DC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8118D4BECF4C9F7986603D92E2968374 /* Pods-libBlueReader_Example.release.xcconfig */;
+			baseConfigurationReference = CF606AC74ED62C531DB4FF636FEC8707 /* Pods-libBlueReader_Example.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-libBlueReader_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-libBlueReader_Example/Pods-libBlueReader_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_libBlueReader_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		57B2FE078A0AD412B74A71E3FD532BAA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAAFF77B094B403EC49807B36192C077 /* Pods-libBlueReader_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-libBlueReader_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-libBlueReader_Tests/Pods-libBlueReader_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_libBlueReader_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5EBA1214F357C014657A37D5ACD26003 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7894932DCD81F2298F7123A11268EB6 /* libBlueReader-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = libBlueReader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		73DFF985F570FF285E0469B9AA3BE474 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7894932DCD81F2298F7123A11268EB6 /* libBlueReader-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = libBlueReader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		85DC4894DBF5E840CA43A516AF6FF103 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7000551CC84E259BB31080307B97EC0 /* Pods-libBlueReader_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-libBlueReader_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-libBlueReader_Tests/Pods-libBlueReader_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_libBlueReader_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DC92C83463434714AA2D366A261FEEA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7894932DCD81F2298F7123A11268EB6 /* libBlueReader-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.0.1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.0.1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/libBlueReader/libBlueReader-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/libBlueReader/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/libBlueReader/libBlueReader.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = libBlueReader;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -743,44 +646,35 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
-				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
+				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A674768AC5ED6D892A6CBFFDFD112BEE /* Build configuration list for PBXNativeTarget "Pods-libBlueReader_Example" */ = {
+		6CF300D1260C984B6A84F51A9F3327B8 /* Build configuration list for PBXNativeTarget "libBlueReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04228C9C39E297655E0A0CA0F1DFB89F /* Debug */,
-				47F128613EAA77685FAFACCAACD61FE5 /* Release */,
+				E1A55BFD6C2A17AFB8BA160A59779E85 /* Debug */,
+				323F6F111D18F02C915555DAC992E28A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADCE7E7CEA78D1C4A3F244600FFB8F25 /* Build configuration list for PBXNativeTarget "libBlueReader" */ = {
+		C8E8C3838DC347B68C9124987ACCB00A /* Build configuration list for PBXNativeTarget "Pods-libBlueReader_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC92C83463434714AA2D366A261FEEA4 /* Debug */,
-				147EC6E7DD326AF33841714761EB8F95 /* Release */,
+				F520A3C035A1E42392D891FA4B328DC8 /* Debug */,
+				C040D665299D7290A4819AD191AABD80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4753BF9D027169868397B9AC7C79EBC /* Build configuration list for PBXNativeTarget "Pods-libBlueReader_Tests" */ = {
+		E275FB5D070D6488FDEF473FD195B05B /* Build configuration list for PBXNativeTarget "Pods-libBlueReader_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85DC4894DBF5E840CA43A516AF6FF103 /* Debug */,
-				57B2FE078A0AD412B74A71E3FD532BAA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EB94B33E8C5EB97742D107909B2AD878 /* Build configuration list for PBXNativeTarget "libBlueReader-libBlueReader" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				73DFF985F570FF285E0469B9AA3BE474 /* Debug */,
-				5EBA1214F357C014657A37D5ACD26003 /* Release */,
+				822CD4A1D1AD1D5F2514286BC66914DF /* Debug */,
+				732113345D00A407F3FD98583A30890A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
