@@ -45,11 +45,38 @@
     return [CBUUID UUIDWithString:@"180A"];
 }
 
++ (CBUUID *) manufacturerNameStringUUID
+{
+    return [CBUUID UUIDWithString:@"0x2A29"];
+}
++ (CBUUID *) modelNumberStringUUID
+{
+    return [CBUUID UUIDWithString:@"0x2A24"];
+}
++ (CBUUID *) serialNumberStringUUID
+{
+    return [CBUUID UUIDWithString:@"0x2A25"];
+}
 + (CBUUID *) hardwareRevisionStringUUID
 {
-    return [CBUUID UUIDWithString:@"2A27"];
+    return [CBUUID UUIDWithString:@"0x2A27"];
 }
-
++ (CBUUID *) firmwareRevisionStringUUID
+{
+    return [CBUUID UUIDWithString:@"0x2A26"];
+}
++ (CBUUID *) softwareRevisionStringUUID
+{
+    return [CBUUID UUIDWithString:@"0x2A28"];
+}
++ (CBUUID *) batteryServiceUUID
+{
+    return [CBUUID UUIDWithString:@"0x180F"];
+}
++ (CBUUID *) batteryLevelStringUUID
+{
+    return [CBUUID UUIDWithString:@"0x2A19"];
+}
 - (UARTPeripheral *) initWithPeripheral:(CBPeripheral*)peripheral delegate:(id<UARTPeripheralDelegate>) delegate
 {
     if (self = [super init])
@@ -69,7 +96,7 @@
 
 - (void) didDisconnect
 {
-    
+
 }
 
 - (void) writeString:(NSString *) string
@@ -91,7 +118,7 @@
 
 - (void) writeRawData:(NSData *) data
 {
-    
+
 }
 
 - (void) peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error
@@ -101,19 +128,33 @@
         DebugLog(@"Error discovering services: %@", error);
         return;
     }
-    
+
     for (CBService *s in [peripheral services])
     {
         if ([s.UUID isEqual:self.class.uartServiceUUID])
         {
             DebugLog(@"Found correct service");
             self.uartService = s;
-            
+
             [self.peripheral discoverCharacteristics:@[self.class.txCharacteristicUUID, self.class.rxCharacteristicUUID] forService:self.uartService];
         }
         else if ([s.UUID isEqual:self.class.deviceInformationServiceUUID])
         {
-            [self.peripheral discoverCharacteristics:@[self.class.hardwareRevisionStringUUID] forService:s];
+            [self.peripheral discoverCharacteristics:
+             @[self.class.hardwareRevisionStringUUID,
+               self.class.softwareRevisionStringUUID,
+               self.class.modelNumberStringUUID,
+               self.class.manufacturerNameStringUUID,
+               self.class.serialNumberStringUUID,
+               self.class.firmwareRevisionStringUUID]
+                                          forService:s];
+        }
+        else if ([s.UUID isEqual:self.class.batteryServiceUUID])
+        {
+            [self.peripheral discoverCharacteristics:
+             @[self.class.batteryLevelStringUUID]
+                                          forService:s];
+
         }
     }
 }
@@ -125,14 +166,14 @@
         DebugLog(@"Error discovering characteristics: %@", error);
         return;
     }
-    
+
     for (CBCharacteristic *c in [service characteristics])
     {
         if ([c.UUID isEqual:self.class.rxCharacteristicUUID])
         {
             DebugLog(@"Found RX characteristic");
             self.rxCharacteristic = c;
-            
+
             [self.peripheral setNotifyValue:YES forCharacteristic:self.rxCharacteristic];
         }
         else if ([c.UUID isEqual:self.class.txCharacteristicUUID])
@@ -145,6 +186,32 @@
             DebugLog(@"Found Hardware Revision String characteristic");
             [self.peripheral readValueForCharacteristic:c];
         }
+        else if ([c.UUID isEqual:self.class.softwareRevisionStringUUID])
+        {
+            DebugLog(@"Found Software Revision String characteristic");
+            [self.peripheral readValueForCharacteristic:c];
+        }
+        else if ([c.UUID isEqual:self.class.modelNumberStringUUID])
+        {
+            DebugLog(@"Found Model Number String characteristic");
+            [self.peripheral readValueForCharacteristic:c];
+        }
+        else if ([c.UUID isEqual:self.class.manufacturerNameStringUUID])
+        {
+            DebugLog(@"Found Manufacturer Name String characteristic");
+            [self.peripheral readValueForCharacteristic:c];
+        }
+        else if ([c.UUID isEqual:self.class.serialNumberStringUUID])
+        {
+            DebugLog(@"Found Serial Number String characteristic");
+            [self.peripheral readValueForCharacteristic:c];
+        }
+        else if ([c.UUID isEqual:self.class.firmwareRevisionStringUUID])
+        {
+            DebugLog(@"Found Firmware Revision String characteristic");
+            [self.peripheral readValueForCharacteristic:c];
+        }
+
     }
 
     if(self.txCharacteristic && self.rxCharacteristic)
@@ -153,6 +220,17 @@
     }
 }
 
+/*- (NSString*) readCharacteristocValueAsHex:(NSData*)data
+{
+    NSString *string = @"";
+    const uint8_t *bytes = data.bytes;
+    for (int i = 0; i < data.length; i++)
+    {
+        DebugLog(@"%x", bytes[i]);
+        string = [string stringByAppendingFormat:@"0x%02x, ", bytes[i]];
+    }
+    return string;
+}*/
 - (void) peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
     if (error)
@@ -160,26 +238,50 @@
         DebugLog(@"Error receiving notification for characteristic %@: %@", characteristic, error);
         return;
     }
-    
+
     DebugLog(@"Received data on a characteristic.");
-    
+
     if (characteristic == self.rxCharacteristic)
     {
-        
+
         NSString *string = [NSString stringWithUTF8String:[[characteristic value] bytes]];
         [self.delegate didReceiveData:string];
     }
     else if ([characteristic.UUID isEqual:self.class.hardwareRevisionStringUUID])
     {
-        NSString *hwRevision = @"";
-        const uint8_t *bytes = characteristic.value.bytes;
-        for (int i = 0; i < characteristic.value.length; i++)
-        {
-            DebugLog(@"%x", bytes[i]);
-            hwRevision = [hwRevision stringByAppendingFormat:@"0x%02x, ", bytes[i]];
-        }
+        NSString* hwRevision = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
+
+        [self.delegate didReadHardwareRevisionString:hwRevision];
+    }
+    else if ([characteristic.UUID isEqual:self.class.softwareRevisionStringUUID])
+    {
+        NSString* softwareRevision = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
+
+        [self.delegate didReadSoftwareRevisionString:softwareRevision];
+    }
+    else if ([characteristic.UUID isEqual:self.class.firmwareRevisionStringUUID])
+    {
+        NSString* firmwareRevision = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
+
+        [self.delegate didReadFirmwareRevisionString:firmwareRevision];
+    }
+    else if ([characteristic.UUID isEqual:self.class.modelNumberStringUUID])
+    {
+        NSString* modelNumber = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
+
+        [self.delegate didReadModelNumberString:modelNumber];
+    }
+    else if ([characteristic.UUID isEqual:self.class.serialNumberStringUUID])
+    {
+        NSString* serialNumber = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
+
+        [self.delegate didReadSerialNumberString:serialNumber];
+    }
+    else if ([characteristic.UUID isEqual:self.class.manufacturerNameStringUUID])
+    {
+        NSString* manufacturerName = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
         
-        [self.delegate didReadHardwareRevisionString:[hwRevision substringToIndex:hwRevision.length-2]];
+        [self.delegate didReadManufacturerNameString:manufacturerName];
     }
 }
 @end

@@ -35,7 +35,7 @@
 {
     if(self = [super init])
     {
-        self.consoleLogging = NO;
+        self.consoleLogging = YES;
         self.delegate = delegate;
         self.cm = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
     }
@@ -89,7 +89,7 @@
     {
         DebugLog(@"started scanning");
         self.state = SCANNING;
-        [self.cm scanForPeripheralsWithServices:@[UARTPeripheral.uartServiceUUID] options:@{CBCentralManagerScanOptionAllowDuplicatesKey: [NSNumber numberWithBool:NO]}];
+        [self.cm scanForPeripheralsWithServices:@[UARTPeripheral.uartServiceUUID,UARTPeripheral.deviceInformationServiceUUID] options:@{CBCentralManagerScanOptionAllowDuplicatesKey: [NSNumber numberWithBool:NO]}];
     }
     else
     {
@@ -114,6 +114,31 @@
         [self.currentPeripheral didConnect];
     }
     self.state = CONNECTED;
+}
+
+- (void) didReadHardwareRevisionString:(NSString *) string
+{
+    DebugLog(@"got hwRevision %@",string);
+}
+- (void) didReadSoftwareRevisionString:(NSString *) string
+{
+    DebugLog(@"got swRevision %@",string);
+}
+- (void) didReadFirmwareRevisionString:(NSString *) string
+{
+    DebugLog(@"got fwRevision %@",string);
+}
+- (void) didReadModelNumberString:(NSString *) string
+{
+    DebugLog(@"got modelNumber %@",string);
+}
+- (void) didReadSerialNumberString:(NSString *) string
+{
+    DebugLog(@"got serialNumber %@",string);
+}
+- (void) didReadManufacturerNameString:(NSString *) string
+{
+    DebugLog(@"got manufacturerName %@",string);
 }
 
 -(void) peripheralReady

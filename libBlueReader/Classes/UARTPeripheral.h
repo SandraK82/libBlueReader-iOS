@@ -9,12 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@protocol UARTPeripheralDelegate
+@protocol UARTPeripheralDelegate <NSObject>
 - (void) didReceiveData:(NSString *) string;
 - (void) peripheralReady;
 
-@optional
 - (void) didReadHardwareRevisionString:(NSString *) string;
+- (void) didReadSoftwareRevisionString:(NSString *) string;
+- (void) didReadFirmwareRevisionString:(NSString *) string;
+- (void) didReadModelNumberString:(NSString *) string;
+- (void) didReadSerialNumberString:(NSString *) string;
+- (void) didReadManufacturerNameString:(NSString *) string;
 @end
 
 

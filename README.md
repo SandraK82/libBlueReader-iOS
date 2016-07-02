@@ -4,11 +4,10 @@
 [![License](https://img.shields.io/cocoapods/l/libBlueReader.svg?style=flat)](http://cocoapods.org/pods/libBlueReader)
 [![Platform](https://img.shields.io/cocoapods/p/libBlueReader.svg?style=flat)](http://cocoapods.org/pods/libBlueReader)
 
-## Usage
+_WORK IN PROGRESS_
+## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-This Example is not reallsy useful right now, it shows only a way to connect to an blueReader, configure it for iso/iec 15693 tags, and reads address 0x10 from an available tag.
-All informations are only given on the console!
 
 ## Requirements
 
