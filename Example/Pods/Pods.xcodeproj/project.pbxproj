@@ -13,10 +13,13 @@
 		201065D116D93E8B91867B55271F860E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		448436B5410DA95AE6F89E7ABC62A514 /* Pods-libBlueReader_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8054A72B5FC937B9F59F7F5BDD8F43C5 /* Pods-libBlueReader_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E3A1C3145C620095FF655208E8D67F0 /* libBlueReader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1EB51EC1E51318FFA396E5190EA99A /* libBlueReader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C8D8D751D282FB9008E6234 /* blueReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C8D8D711D282FB9008E6234 /* blueReader.h */; };
+		6C8D8D761D282FB9008E6234 /* blueReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D8D721D282FB9008E6234 /* blueReader.m */; };
+		6C8D8D771D282FB9008E6234 /* UARTPeripheral.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C8D8D731D282FB9008E6234 /* UARTPeripheral.h */; };
+		6C8D8D781D282FB9008E6234 /* UARTPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D8D741D282FB9008E6234 /* UARTPeripheral.m */; };
 		7F134261F6859BCCF2AB0F51A980356A /* Pods-libBlueReader_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9903BB036499002607877C29897CF097 /* Pods-libBlueReader_Tests-dummy.m */; };
 		831CCBD3FB813F53C591BDB832E9E3BD /* Pods-libBlueReader_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E274010497CA4662B3672DEFA28985C2 /* Pods-libBlueReader_Example-dummy.m */; };
 		DAB11E0761C6F177E0FA1DE8D07224E7 /* Pods-libBlueReader_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FAE706719E5BC698C644AD8100FD3DA /* Pods-libBlueReader_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4510A2068DDDB3E076A4E5B9093E067 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 652E66D869D4F7DDA2D6DFCA3D6F3358 /* ReplaceMe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,11 @@
 		2FDEEFE6741CFDD62BD0A7E00750B1F0 /* Pods-libBlueReader_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-libBlueReader_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		52572C792B69120BC86E1807726B2EAC /* Pods-libBlueReader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-libBlueReader_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		52B57DD413D32549EC17111315F8A714 /* libBlueReader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libBlueReader.xcconfig; sourceTree = "<group>"; };
-		652E66D869D4F7DDA2D6DFCA3D6F3358 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
+		6C8D8D711D282FB9008E6234 /* blueReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = blueReader.h; path = ../../Classes/blueReader.h; sourceTree = "<group>"; };
+		6C8D8D721D282FB9008E6234 /* blueReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = blueReader.m; path = ../../Classes/blueReader.m; sourceTree = "<group>"; };
+		6C8D8D731D282FB9008E6234 /* UARTPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UARTPeripheral.h; path = ../../Classes/UARTPeripheral.h; sourceTree = "<group>"; };
+		6C8D8D741D282FB9008E6234 /* UARTPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UARTPeripheral.m; path = ../../Classes/UARTPeripheral.m; sourceTree = "<group>"; };
+		6C8D8D7C1D2830B6008E6234 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; name = public; path = ../../Classes/public; sourceTree = "<group>"; };
 		6FAE706719E5BC698C644AD8100FD3DA /* Pods-libBlueReader_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-libBlueReader_Example-umbrella.h"; sourceTree = "<group>"; };
 		70A92171DEB8EC78012E6419ED81F43E /* Pods-libBlueReader_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-libBlueReader_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		70B595C60EACEDCBC06180E53B061078 /* Pods-libBlueReader_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-libBlueReader_Example-resources.sh"; sourceTree = "<group>"; };
@@ -192,7 +199,11 @@
 		968ADC27AC9C1BCD33706E8A136648F9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				652E66D869D4F7DDA2D6DFCA3D6F3358 /* ReplaceMe.m */,
+				6C8D8D7C1D2830B6008E6234 /* public */,
+				6C8D8D711D282FB9008E6234 /* blueReader.h */,
+				6C8D8D721D282FB9008E6234 /* blueReader.m */,
+				6C8D8D731D282FB9008E6234 /* UARTPeripheral.h */,
+				6C8D8D741D282FB9008E6234 /* UARTPeripheral.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -230,6 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E3A1C3145C620095FF655208E8D67F0 /* libBlueReader-umbrella.h in Headers */,
+				6C8D8D751D282FB9008E6234 /* blueReader.h in Headers */,
+				6C8D8D771D282FB9008E6234 /* UARTPeripheral.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,8 +366,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C8D8D781D282FB9008E6234 /* UARTPeripheral.m in Sources */,
+				6C8D8D761D282FB9008E6234 /* blueReader.m in Sources */,
 				097D0AA4E0A243568EF8B4B543762B6D /* libBlueReader-dummy.m in Sources */,
-				F4510A2068DDDB3E076A4E5B9093E067 /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

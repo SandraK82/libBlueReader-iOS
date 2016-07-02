@@ -24,8 +24,8 @@ The blueReader NFC-to-BLE-Adapter is a ready to buy or diy Hardware for reading 
   s.platform = :ios
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'libBlueReader/Classes/**/*'
+  s.source_files = 'Classes/**/*'
 
-  s.public_header_files = 'Pod/Classes/public/*.h'
+  s.public_header_files = 'Classes/public/*.h'
 
 end
